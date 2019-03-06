@@ -1,0 +1,16 @@
+[user]
+    name = daikichi
+    email = daiki.yamaguchi@viibar.com
+[color]
+    ui = auto
+[alias]
+    co = checkout
+    st = status
+    br = branch
+[gui]
+    encoding = utf-8
+[core]
+    quotepath = false # 日本語コミットの文字コード化を防ぐ
+    editor = vim
+[merge]
+    tool = vimdiff
