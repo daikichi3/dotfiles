@@ -24,7 +24,7 @@ PROMPT='
 %(?.$.%F{red}$%f) '
 
 alias ls='/usr/local/bin/gls --color=auto'
-eval $(/usr/local/bin/gdircolors /Users/yamapod3/Develop/bash_dir/dircolors-solarized-master/dircolors.ansi-universal)
+eval $(/usr/local/bin/gdircolors ~/bash_dir/dircolors-solarized-master/dircolors.ansi-universal)
 
 set -o vi
 alias ll='ls -al'
