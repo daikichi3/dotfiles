@@ -28,3 +28,18 @@ eval $(/usr/local/bin/gdircolors ~/bash_dir/dircolors-solarized-master/dircolors
 
 set -o vi
 alias ll='ls -al'
+
+# 履歴
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=100000
+setopt hist_ignore_dups
+setopt EXTENDED_HISTORY
+bindkey -v
+bindkey '\e[3~' delete-char
+bindkey '^R' history-incremental-search-backward
+
+# 補完
+autoload -U compinit
+compinit
+
