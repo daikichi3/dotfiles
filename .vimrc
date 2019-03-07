@@ -56,6 +56,7 @@ if dein#load_state('~/.vim/dein')
     call dein#add('tpope/vim-fugitive')
     call dein#add('scrooloose/nerdtree')
     call dein#add('ConradIrwin/vim-bracketed-paste')
+    call dein#add('posva/vim-vue')
 
     call dein#end()
     call dein#save_state()
@@ -71,3 +72,5 @@ let g:NERDTreeNodeDelimiter = "\u00a0"
 if dein#check_install()
     call dein#install()
 endif
+
+autocmd FileType vue syntax sync fromstart
