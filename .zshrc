@@ -43,3 +43,14 @@ bindkey '^R' history-incremental-search-backward
 autoload -U compinit
 compinit
 
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH="$HOME/.rbenv/shims:$PATH"
+
+eval "$(rbenv init -)"
+
+# nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
