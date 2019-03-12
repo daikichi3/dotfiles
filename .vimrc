@@ -57,6 +57,10 @@ if dein#load_state('~/.vim/dein')
     call dein#add('scrooloose/nerdtree')
     call dein#add('ConradIrwin/vim-bracketed-paste')
     call dein#add('posva/vim-vue')
+    call dein#add('plasticboy/vim-markdown')
+    call dein#add('kannokanno/previm')
+    call dein#add('tyru/open-browser.vim')
+    call dein#add('rking/ag.vim')
 
     call dein#end()
     call dein#save_state()
@@ -74,3 +78,19 @@ if dein#check_install()
 endif
 
 autocmd FileType vue syntax sync fromstart
+
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_auto_insert_bullets = 0
+let g:vim_markdown_new_list_item_indent = 0
+
+" previm
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+" ctrl pでプレビュー
+nnoremap <silent> <C-p> :PrevimOpen<CR>
+
+" tyru/open-browser.vim
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
