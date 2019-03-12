@@ -54,3 +54,5 @@ export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+export PATH="$HOME/local/bin:$PATH"
