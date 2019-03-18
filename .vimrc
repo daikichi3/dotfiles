@@ -61,6 +61,17 @@ if dein#load_state('~/.vim/dein')
     call dein#add('kannokanno/previm')
     call dein#add('tyru/open-browser.vim')
     call dein#add('rking/ag.vim')
+    call dein#add('vim-ruby/vim-ruby')
+    " 閉じタグ自動補完
+    call dein#add('alvan/vim-closetag')
+    let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.erb,*.php,*.vue'
+    " railsの補完やシンタックスハイライト
+    call dein#add('tpope/vim-rails')
+    " railsのdef...endを補完
+    call dein#add('alpaca-tc/vim-endwise.git')
+    let g:endwise_no_mappings=1
+    " slimシンタックス
+    call dein#add('slim-template/vim-slim')
 
     call dein#end()
     call dein#save_state()
