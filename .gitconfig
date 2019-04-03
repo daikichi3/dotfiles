@@ -2,7 +2,7 @@
     name = daikichi
     email = daiki.yamaguchi@viibar.com
 [color]
-    ui = auto
+    ui = true
 [alias]
     co = checkout
     st = status
