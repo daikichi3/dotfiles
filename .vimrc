@@ -62,6 +62,7 @@ if dein#load_state('~/.vim/dein')
     call dein#add('tyru/open-browser.vim')
     call dein#add('rking/ag.vim')
     call dein#add('vim-ruby/vim-ruby')
+    call dein#add('w0rp/ale')
     " 閉じタグ自動補完
     call dein#add('alvan/vim-closetag')
     let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.erb,*.php,*.vue'
@@ -105,3 +106,10 @@ nnoremap <silent> <C-p> :PrevimOpen<CR>
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+
+ " ale
+let g:ale_linters = {
+\   'javascript': ['rubocop'],
+\}
+
+let g:ale_fix_on_save = 1
